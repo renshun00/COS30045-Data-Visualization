@@ -1,3 +1,6 @@
+# Run the website using Python
+python -m http.server 8000
+
 # PowerSense – Appliance Energy Consumption Website
 
 A three-page static website about appliance energy consumption in the Australian market,
