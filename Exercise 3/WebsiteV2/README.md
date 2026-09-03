@@ -157,8 +157,7 @@ In accordance with academic integrity and ethical AI usage guidelines:
 
 * **Tools Used**: Google DeepMind Antigravity AI assistant.
 * **Nature of Assistance**:
-  * Ideation and structuring of the audience analysis and visual storytelling guidelines.
-  * Statistical aggregation of raw dataset values (`BrandCount.csv` and `screen_size.csv`).
+  * Giving idea and structure for audience analysis and visual storytelling guidelines.
   * Authoring semantic HTML5 and vanilla JavaScript rendering code for the custom SVG Pie Chart and Bar Chart.
   * Assisting with Markdown drafting for documentation sections.
 * **Human Oversight & Verification**: All generated code, mathematical calculations, visual layouts, and written analyses have been reviewed, verified, tested in browser environments, and validated for technical accuracy and adherence to course requirements by the author.
