@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerSense – Appliance Energy Consumption Australia</title>
+  <meta name="description" content="Understand and reduce your home appliance energy consumption with PowerSense, your guide to the Australian energy market." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+
+      <a href="index.html" class="nav__logo" aria-label="PowerSense – Home">
+        <img src="assets/img/PowerIcon.png" alt="PowerSense logo" width="42" height="42" />
+        <span class="nav__logo-text">Power<span>Sense</span></span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle"
+              aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="televisions.html" class="nav__link">Televisions</a></li>
+        <li><a href="data-story.html"  class="nav__link">Data Story</a></li>
+        <li><a href="about.html"       class="nav__link">About Us</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero__eyebrow">Australian Energy Market 2024</span>
+        <h1>Know your <em>energy bill</em> before it arrives</h1>
+        <p class="hero__sub">
+          Australian households spend an average of $1,900 per year on electricity.
+          PowerSense helps you understand which appliances are costing you the most —
+          and how to take control.
+        </p>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-value">$1,900</div>
+            <div class="hero__stat-label">Avg. annual household bill</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">40%</div>
+            <div class="hero__stat-label">Heating &amp; cooling share</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">8–15%</div>
+            <div class="hero__stat-label">Standby power waste</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OVERVIEW CARDS ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Why It Matters</span>
+          <h2>Energy costs add up fast</h2>
+          <p>With electricity prices in Australia rising year on year, knowing your appliance usage is the first step to smarter bills.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__icon">🏠</div>
+            <h3 class="card__title">Household Consumption</h3>
+            <p>The average Australian home uses around 18–20 kWh per day. Appliances account for roughly 60% of that — with heating, cooling, and refrigeration leading the way.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">📺</div>
+            <h3 class="card__title">Televisions &amp; Entertainment</h3>
+            <p>Modern televisions have become significantly more efficient, but larger screens and longer viewing hours can still add up to $80–$150 per year on your power bill.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">❄️</div>
+            <h3 class="card__title">Air Conditioning</h3>
+            <p>Reverse-cycle air conditioners are the single biggest appliance energy user, consuming 1–3 kWh per hour of operation. Choosing a high-star-rated model can save hundreds annually.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🌞</div>
+            <h3 class="card__title">Solar &amp; Renewables</h3>
+            <p>Over 3 million Australian homes now have rooftop solar. Understanding when your appliances run helps you maximise self-consumption and minimise grid import costs.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🔌</div>
+            <h3 class="card__title">Standby Power</h3>
+            <p>Devices on standby collectively waste 8–15% of a household's electricity. Switching off at the wall — particularly for TVs and set-top boxes — can cut dozens of dollars from your bill.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⭐</div>
+            <h3 class="card__title">Energy Star Ratings</h3>
+            <p>Australia's mandatory star rating label makes it easy to compare appliances. Each additional star typically represents a 25–30% reduction in running costs over the appliance's lifetime.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ENERGY CALCULATOR ===== -->
+    <section class="section section--alt" id="calculator">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Interactive Tool</span>
+          <h2>Appliance Energy Calculator</h2>
+          <p>Enter your appliance details to see how much energy — and money — it costs to run.</p>
+        </div>
+
+        <div class="calculator">
+          <form id="calcForm" novalidate>
+            <div class="calculator__grid">
+
+              <!-- Appliance preset -->
+              <div class="field">
+                <label for="applianceSelect">Appliance preset (optional)</label>
+                <select id="applianceSelect">
+                  <option value="custom">— Enter watts manually —</option>
+                  <optgroup label="Televisions">
+                    <option value="samsung65">Samsung 65&quot; OLED QN65S95D (180 W)</option>
+                    <option value="lg55">LG 55&quot; NanoCell 55NANO86 (120 W)</option>
+                    <option value="sony43">Sony 43&quot; Bravia X80L (90 W)</option>
+                    <option value="panasonic50">Panasonic 50&quot; MX700 (135 W)</option>
+                    <option value="tcl32">TCL 32&quot; S5400A (65 W)</option>
+                  </optgroup>
+                  <optgroup label="Other Appliances">
+                    <option value="microwave">Microwave oven (1200 W)</option>
+                    <option value="washingmachine">Washing machine (500 W)</option>
+                    <option value="refrigerator">Refrigerator (150 W)</option>
+                    <option value="dishwasher">Dishwasher (1800 W)</option>
+                    <option value="airconditioner">Split-system air conditioner (1500 W)</option>
+                    <option value="electricoven">Electric oven (2200 W)</option>
+                    <option value="kettleelectric">Electric kettle (2400 W)</option>
+                    <option value="laptop">Laptop (65 W)</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Watts -->
+              <div class="field" id="fieldWatts">
+                <label for="watts">Appliance power (watts) *</label>
+                <input type="number" id="watts" name="watts"
+                       min="0.1" max="30000" step="0.1"
+                       placeholder="e.g. 120" required />
+                <span class="field__error-msg" role="alert">Enter a valid wattage between 0.1 and 30,000 W.</span>
+              </div>
+
+              <!-- Hours per day -->
+              <div class="field" id="fieldHours">
+                <label for="hoursPerDay">Hours used per day *</label>
+                <input type="number" id="hoursPerDay" name="hoursPerDay"
+                       min="0.01" max="24" step="0.25"
+                       placeholder="e.g. 4" required />
+                <span class="field__error-msg" role="alert">Enter a value between 0.01 and 24 hours.</span>
+              </div>
+
+              <!-- Electricity price -->
+              <div class="field" id="fieldPrice">
+                <label for="priceKwh">Electricity price (cents / kWh) *</label>
+                <input type="number" id="priceKwh" name="priceKwh"
+                       min="0.01" max="500" step="0.01"
+                       value="33" required />
+                <span class="field__error-msg" role="alert">Enter a valid price (Australian average ≈ 33 c/kWh).</span>
+              </div>
+
+            </div><!-- /.calculator__grid -->
+
+            <div class="calculator__actions">
+              <button type="submit" class="btn btn--primary">⚡ Calculate</button>
+              <button type="button" class="btn btn--secondary" id="calcReset">Reset</button>
+            </div>
+          </form>
+
+          <!-- Results panel (hidden until calculation runs) -->
+          <div class="calc-results" id="calcResults" aria-live="polite">
+            <p class="calc-results__title">Your estimated energy usage &amp; cost</p>
+            <div class="results-grid">
+              <div class="result-card">
+                <div class="result-card__value" id="res-daily-kwh">—</div>
+                <div class="result-card__label">kWh / day</div>
+              </div>
+              <div class="result-card">
+                <div class="result-card__value" id="res-monthly-kwh">—</div>
+                <div class="result-card__label">kWh / month</div>
+              </div>
+              <div class="result-card">
+                <div class="result-card__value" id="res-yearly-kwh">—</div>
+                <div class="result-card__label">kWh / year</div>
+              </div>
+              <div class="result-card result-card--accent">
+                <div class="result-card__value" id="res-monthly-cost">—</div>
+                <div class="result-card__label">Est. monthly cost</div>
+              </div>
+              <div class="result-card result-card--accent">
+                <div class="result-card__value" id="res-yearly-cost">—</div>
+                <div class="result-card__label">Est. yearly cost</div>
+              </div>
+              <div class="result-card">
+                <div class="result-card__value" id="res-co2">—</div>
+                <div class="result-card__label">CO₂ / year (est.)</div>
+              </div>
+            </div>
+            <p style="margin-top:1rem;font-size:0.8rem;opacity:0.6;">
+              Calculations based on provided inputs. Electricity price defaults to the Australian average of 33 c/kWh.
+              CO₂ estimate uses the Australian grid emission factor of 0.79 kg CO₂e/kWh (DCCEEW 2023).
+            </p>
+          </div>
+
+        </div><!-- /.calculator -->
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Help Centre</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about household appliance energy consumption in Australia.</p>
+        </div>
+
+        <ul class="faq-list" role="list">
+
+          <li class="faq-item">
+            <button class="faq-item__trigger"
+                    aria-expanded="false"
+                    aria-controls="faq-1"
+                    id="faq-1-btn">
+              How is electricity priced in Australia?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__body" id="faq-1" role="region" aria-labelledby="faq-1-btn">
+              <div class="faq-item__body-inner">
+                Electricity in Australia is priced per kilowatt-hour (kWh) and varies by state, retailer,
+                and plan type. As of 2024, the national average sits around 28–36 cents per kWh for
+                residential customers, with South Australia typically the highest and Queensland among
+                the lowest. Most plans include a fixed daily supply charge plus a usage rate.
+                Time-of-use tariffs charge more during peak hours (typically 3–9 pm on weekdays) and
+                less during off-peak periods — relevant if you run heavy appliances like dishwashers
+                or washing machines.
+              </div>
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-item__trigger"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                    id="faq-2-btn">
+              What does the Australian Energy Star rating mean?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__body" id="faq-2" role="region" aria-labelledby="faq-2-btn">
+              <div class="faq-item__body-inner">
+                The Energy Rating Label is a mandatory requirement for most appliances sold in Australia,
+                administered under the Equipment Energy Efficiency (E3) programme.
+                The label shows a star rating (1–6 stars, sometimes up to 10 for the most efficient models)
+                and an annual energy consumption figure in kWh. More stars = lower running costs.
+                A 6-star fridge uses roughly half the electricity of a 2-star fridge of the same size.
+                When buying a new appliance, the upfront premium for a higher star-rated model is often
+                recouped within 2–4 years through lower bills.
+              </div>
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-item__trigger"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                    id="faq-3-btn">
+              Which household appliances use the most electricity?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__body" id="faq-3" role="region" aria-labelledby="faq-3-btn">
+              <div class="faq-item__body-inner">
+                In a typical Australian home, the biggest energy consumers (in order) are:
+                <ol style="margin:0.75rem 0 0 1.25rem;line-height:1.9;">
+                  <li>Heating and cooling (air conditioners, reverse-cycle systems) — up to 40%</li>
+                  <li>Water heating — 20–25%</li>
+                  <li>Refrigerators &amp; freezers — 8–10% (run 24/7)</li>
+                  <li>Cooking appliances — 5–7%</li>
+                  <li>Lighting — 5–7%</li>
+                  <li>Televisions &amp; entertainment — 4–6%</li>
+                  <li>Washing machines &amp; dryers — 4–5%</li>
+                </ol>
+              </div>
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-item__trigger"
+                    aria-expanded="false"
+                    aria-controls="faq-4"
+                    id="faq-4-btn">
+              How can I reduce my standby power consumption?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__body" id="faq-4" role="region" aria-labelledby="faq-4-btn">
+              <div class="faq-item__body-inner">
+                Standby power (sometimes called "vampire power") accounts for 8–15% of household
+                electricity use. Practical steps to reduce it include:
+                switching appliances off at the wall when not in use (especially TVs, gaming consoles,
+                and set-top boxes), using smart power strips that cut power to idle devices,
+                enabling power-saving modes on computers and monitors, and replacing older
+                appliances with newer models that have lower standby draw.
+                The Australian Government's Your Energy Savings website provides a detailed
+                standby power usage guide with typical wattages for common devices.
+              </div>
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-item__trigger"
+                    aria-expanded="false"
+                    aria-controls="faq-5"
+                    id="faq-5-btn">
+              Does solar power completely eliminate my electricity bill?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__body" id="faq-5" role="region" aria-labelledby="faq-5-btn">
+              <div class="faq-item__body-inner">
+                Solar panels can dramatically reduce — but rarely eliminate — electricity bills
+                for most Australian households. The savings depend on your system size, roof
+                orientation, local solar irradiance, and your household's daytime usage patterns.
+                The key principle is self-consumption: energy your solar panels generate and your
+                home uses directly is effectively free; energy exported to the grid earns a
+                feed-in tariff (currently 5–12 c/kWh in most states), which is much lower than
+                the import rate you pay. Shifting high-draw appliances (dishwashers, washing machines,
+                EV charging) to daylight hours maximises your savings.
+              </div>
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-item__trigger"
+                    aria-expanded="false"
+                    aria-controls="faq-6"
+                    id="faq-6-btn">
+              Is it cheaper to run appliances overnight?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__body" id="faq-6" role="region" aria-labelledby="faq-6-btn">
+              <div class="faq-item__body-inner">
+                It depends on your electricity tariff. If you are on a flat-rate plan, the time of
+                day makes no difference to your bill. If you are on a time-of-use (TOU) tariff,
+                off-peak rates (typically overnight and on weekends) can be 30–50% cheaper than
+                peak rates. Appliances like dishwashers and washing machines with delay-start
+                features can be programmed to run during the cheapest window.
+                However, if you have solar and no battery storage, running appliances during
+                daylight hours is typically even cheaper than an overnight off-peak rate.
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/PowerIcon.png" alt="" aria-hidden="true" />
+        <span class="footer__brand-name">PowerSense</span>
+      </div>
+      <div class="footer__info">
+        <p>&copy; <span id="year"></span> &nbsp;Ren Khoo</p>
+        <p class="footer__ai-note">
+          ✦ Content and code on this site were developed with the assistance of Generative AI (Claude by Anthropic).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculator.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

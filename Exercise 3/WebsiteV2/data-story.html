@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Story – PowerSense</title>
+  <meta name="description" content="Explore the 6-step data story of Australian TV energy consumption: brand market shares and the energy penalties of large screen sizes." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="PowerSense – Home">
+        <img src="assets/img/PowerIcon.png" alt="PowerSense logo" width="42" height="42" />
+        <span class="nav__logo-text">Power<span>Sense</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle"
+              aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="televisions.html" class="nav__link">Televisions</a></li>
+        <li><a href="data-story.html"  class="nav__link">Data Story</a></li>
+        <li><a href="about.html"       class="nav__link">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="about-hero">
+      <div class="container">
+        <span class="hero__eyebrow">Australian Television Market Analytics 2026</span>
+        <h1>The TV Energy Consumption Story</h1>
+        <p class="hero__sub" style="color:rgba(250,242,206,0.85);">
+          An empirical investigation into 4,116 television models registered for sale in Australia.
+          Structured using the proven 6-step visual storyboard framework: from identifying the core market issues to demonstrating empirical evidence and delivering actionable buying recommendations.
+        </p>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-value">4,116</div>
+            <div class="hero__stat-label">Certified TV Models</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">62.2%</div>
+            <div class="hero__stat-label">Market Share (Top 3 Brands)</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">4.9×</div>
+            <div class="hero__stat-label">Large vs Small TV Power</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STORYBOARD 1: BRAND CONCENTRATION ===== -->
+    <section class="section" id="storyboard-brands">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Storyboard 1 · 6-Step Visual Narrative</span>
+          <h2>Market Concentration: Who Powers Australian Living Rooms?</h2>
+          <p>
+            With 75 registered brands active in Australia as of February 2026, consumers seem spoiled for choice.
+            This 6-step storyboard uncovers how an illusion of competition masks an overwhelming brand oligopoly.
+          </p>
+        </div>
+
+        <!-- 6-Panel Sticky Note Storyboard Board -->
+        <div class="storyboard-board">
+          <div class="sticky-grid">
+
+            <!-- Panel 1: Issue -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Issue:</h3>
+              <div class="sticky-note__headline">The Illusion of Choice in Australian TV Retail</div>
+              <p class="sticky-note__text">
+                Consumers face walls of over 75 TV brands in Australian electronics stores and online retailers.
+                Buyers naturally assume intense competition guarantees innovation, competitive pricing, and high energy efficiency.
+                In reality, a tiny handful of dominant manufacturers control living room entertainment across the country.
+              </p>
+            </article>
+
+            <!-- Panel 2: Demonstrate Issue (Visualisation) -->
+            <article class="sticky-note" style="grid-column: span 1;">
+              <h3 class="sticky-note__title">Demonstrate Issue:</h3>
+              <div class="sticky-note__headline">Show Brand Count &amp; Market Concentration Data</div>
+              <p class="sticky-note__text" style="margin-bottom: 0.5rem;">
+                Official registry data (4,116 certified models) reveals that just <strong>3 brands control 62.2%</strong> of all television models in Australia:
+              </p>
+
+              <!-- Interactive Donut / Pie Chart -->
+              <div class="sticky-note__chart-container">
+                <div id="brandPieChartContainer" class="chart-render-area" style="min-height: 260px;"></div>
+              </div>
+
+              <div id="brandPieLegend" class="legend-grid" style="max-height: 120px; overflow-y: auto; margin-top: 0.5rem;"></div>
+            </article>
+
+            <!-- Panel 3: Ideas for Overcoming Issue -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Ideas for Overcoming Issue:</h3>
+              <div class="sticky-note__headline">Independent Energy Auditing &amp; Challenger Transparency</div>
+              <p class="sticky-note__text">
+                How can consumers break free from brand marketing bias?
+                <br /><br />
+                • Look past the brand badge: audit certified GEMS Energy Ratings.<br />
+                • Compare energy consumption per cm² rather than brand status.<br />
+                • Spotlight mid-tier challenger brands (Hisense, TCL, Eko) that challenge the Big 3 on price-to-efficiency value.
+              </p>
+            </article>
+
+            <!-- Panel 4: Describe Methodology -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Describe Analysis Strategy:</h3>
+              <div class="sticky-note__headline">Classify Brands into 3 Strategic Functional Tiers</div>
+              <p class="sticky-note__text">
+                To help consumers navigate the 75 brands, we classified them by market function:
+                <br /><br />
+                <strong>1. Market Leaders (62.2%):</strong> Samsung (1,096), Kogan (788), LG (677).<br />
+                <strong>2. Mid-Tier Challengers (26.9%):</strong> Hisense (263), Eko (189), Sylvox (132), JVC (122), Philips (118), Blaupunkt (110), TCL (91), Sony (80).<br />
+                <strong>3. The Long Tail (10.9%):</strong> 64 niche &amp; specialized brands.
+              </p>
+            </article>
+
+            <!-- Panel 5: Show Data & Evidence -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Show Comparative Evidence:</h3>
+              <div class="sticky-note__headline">Brand Prestige Does Not Equal Energy Efficiency</div>
+              <p class="sticky-note__text">
+                Cross-referencing brand registrations against energy star ratings reveals a stark truth:
+                <br /><br />
+                • Premium brands frequently sell flagship models rated at only <strong>1.5 to 2.5 stars</strong> due to power-hungry 8K and high-nit backlights.<br />
+                • Value brands like Bauhn and Linsar offer <strong>6-star certified models</strong> drawing under 300 kWh/year.<br />
+                • Brand name is no guarantee of green performance!
+              </p>
+            </article>
+
+            <!-- Panel 6: Recommendation -->
+            <article class="sticky-note sticky-note--highlight">
+              <h3 class="sticky-note__title">RECOMMENDATION:</h3>
+              <div class="sticky-note__headline">Audit Energy Stars Before Brand Logos</div>
+              <p class="sticky-note__text">
+                <strong>Don't pay a premium solely for brand badge prestige!</strong>
+                <br /><br />
+                1. Filter TVs strictly by <strong>5+ Energy Stars</strong> first, then compare brand features.<br />
+                2. If considering Samsung, Kogan, or LG, inspect the certified annual kWh label—don't assume all their models are efficient.<br />
+                3. Support competitive mid-tier brands that offer superior energy efficiency at half the retail cost.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STORYBOARD 2: SCREEN SIZE VS ENERGY CONSUMPTION ===== -->
+    <section class="section section--alt" id="storyboard-screensize">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Storyboard 2 · 6-Step Visual Narrative</span>
+          <h2>The Screen Size Dilemma: How Much Does Immersion Cost?</h2>
+          <p>
+            Falling panel manufacturing costs have made massive 75", 85", and 98" TVs affordable to purchase upfront.
+            This 6-step storyboard documents the steep, non-linear energy tax that comes with going bigger.
+          </p>
+        </div>
+
+        <!-- 6-Panel Sticky Note Storyboard Board -->
+        <div class="storyboard-board">
+          <div class="sticky-grid">
+
+            <!-- Panel 1: Issue -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Issue:</h3>
+              <div class="sticky-note__headline">The Screen Size Explosion &amp; The Hidden Energy Tax</div>
+              <p class="sticky-note__text">
+                Massive televisions have become affordable impulse buys. Consumers upgrade from 43" or 55" screens to 75"+ giants without realizing they are locking in an escalating quarterly electricity expense for the next 10 years.
+                Upfront sticker savings are frequently erased by long-term operating costs.
+              </p>
+            </article>
+
+            <!-- Panel 2: Demonstrate Issue (Visualisation) -->
+            <article class="sticky-note" style="grid-column: span 1;">
+              <h3 class="sticky-note__title">Demonstrate Issue:</h3>
+              <div class="sticky-note__headline">Average Energy Consumption by Screen Category</div>
+              <p class="sticky-note__text" style="margin-bottom: 0.5rem;">
+                Labelled annual electricity demand (kWh/year) across Small, Medium, and Large categories:
+              </p>
+
+              <!-- Interactive Bar Chart -->
+              <div class="sticky-note__chart-container">
+                <div id="screenSizeBarChartContainer" class="chart-render-area" style="min-height: 250px;"></div>
+              </div>
+            </article>
+
+            <!-- Panel 3: Ideas for Overcoming Issue -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Ideas for Overcoming Issue:</h3>
+              <div class="sticky-note__headline">Viewing-Distance Sizing &amp; 10-Year Lifecycle Accounting</div>
+              <p class="sticky-note__text">
+                How can households avoid bill shock while enjoying immersive entertainment?
+                <br /><br />
+                • Establish an objective <strong>Room Viewing-Distance Rule</strong> to prevent buying oversized screens.<br />
+                • Mandate Point-of-Sale <strong>10-Year Lifetime Cost of Ownership</strong> calculations.<br />
+                • Calibrate factory picture settings to eliminate wasteful showroom display modes.
+              </p>
+            </article>
+
+            <!-- Panel 4: Describe Smart Sizing Framework -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Describe Sizing Framework:</h3>
+              <div class="sticky-note__headline">The 2.5-Metre Rule &amp; Ambient Sensor Automation</div>
+              <p class="sticky-note__text">
+                <strong>1. Optimal Field of View:</strong> For typical Australian seating distances under 2.8m, a 55"–65" display delivers a 40° cinematic angle without paying the 85" power penalty.<br />
+                <strong>2. Auto-Brightness Sensors:</strong> Enable ambient light sensors to automatically lower backlight in dark rooms, cutting energy consumption by 25–35%.<br />
+                <strong>3. Eco Presets:</strong> Switch out of showroom "Vivid" mode into "Cinema/Standard Eco".
+              </p>
+            </article>
+
+            <!-- Panel 5: Show Data & Tariff Simulation -->
+            <article class="sticky-note">
+              <h3 class="sticky-note__title">Show Data &amp; Simulation:</h3>
+              <div class="sticky-note__headline">Live Household Electricity Tariff Simulator</div>
+              <p class="sticky-note__text" style="margin-bottom: 0.5rem;">
+                Adjust your household's actual electricity price to observe real-time annual running costs:
+              </p>
+
+              <!-- Interactive Tariff Simulator -->
+              <div class="tariff-simulator" style="margin-top: 0.5rem; padding: 0.85rem;">
+                <div class="tariff-simulator__header">
+                  <span style="font-weight:600; font-size:0.85rem;">Electricity Tariff:</span>
+                  <span class="tariff-badge" id="tariffDisplay" style="font-size:0.82rem; padding:0.2rem 0.6rem;">33¢ / kWh</span>
+                </div>
+                <div class="tariff-slider-row" style="margin:0.4rem 0;">
+                  <span class="tariff-bound">20¢</span>
+                  <input type="range" id="tariffSlider" min="20" max="50" step="1" value="33"
+                         aria-label="Electricity tariff rate in cents per kilowatt-hour" />
+                  <span class="tariff-bound">50¢</span>
+                </div>
+                <div class="cost-summary-grid" style="margin-top:0.5rem;">
+                  <div class="cost-pill cost-pill--small" style="padding:0.4rem;">
+                    <span class="cost-pill__label">Small</span>
+                    <span class="cost-pill__val" id="calcCostSmall" style="font-size:1.25rem;">$52</span>
+                    <span class="cost-pill__sub">per year</span>
+                  </div>
+                  <div class="cost-pill cost-pill--medium" style="padding:0.4rem;">
+                    <span class="cost-pill__label">Medium</span>
+                    <span class="cost-pill__val" id="calcCostMedium" style="font-size:1.25rem;">$131</span>
+                    <span class="cost-pill__sub">per year</span>
+                  </div>
+                  <div class="cost-pill cost-pill--large" style="padding:0.4rem;">
+                    <span class="cost-pill__label">Large</span>
+                    <span class="cost-pill__val" id="calcCostLarge" style="font-size:1.25rem;">$253</span>
+                    <span class="cost-pill__sub">per year</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="cost-diff-note" style="margin-top: 0.65rem;">
+                ⚡ 10-Year Bill Difference: <strong>Large over Small</strong> adds approx. <strong id="calcCostDiff">$2,010</strong> in extra electricity!
+              </p>
+            </article>
+
+            <!-- Panel 6: Recommendation -->
+            <article class="sticky-note sticky-note--highlight">
+              <h3 class="sticky-note__title">RECOMMENDATION:</h3>
+              <div class="sticky-note__headline">Choose the 55"–65" Medium Sweet Spot (5+ Stars)</div>
+              <p class="sticky-note__text">
+                <strong>Empirical Buying Rules:</strong>
+                <br /><br />
+                1. <strong>Target the 55"–65" Sweet Spot:</strong> Medium screens balance great immersion with modest power draw (~$131/yr).<br />
+                2. <strong>Mandate 5.5+ Stars on 75"+:</strong> If you must buy a large screen, choose a model rated 5.5 to 7 stars to save $1,200+ over its lifespan.<br />
+                3. <strong>Factor in Running Costs:</strong> A bargain $999 large TV with a 2-star rating will cost over $3,500 to run—making it far more expensive than a high-efficiency alternative!
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT THE DATA & GOVERNANCE ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Integrity &amp; Governance</span>
+          <h2>About the Data Behind This Story</h2>
+        </div>
+
+        <div class="governance-grid">
+          <div class="gov-card">
+            <div class="gov-card__icon">🏛️</div>
+            <h4>Data Source</h4>
+            <p>
+              Equipment Energy Efficiency (E3) Program and GEMS Regulator public database,
+              capturing 4,116 television models registered for sale in Australia as of February 2026.
+            </p>
+          </div>
+
+          <div class="gov-card">
+            <div class="gov-card__icon">⚙️</div>
+            <h4>Data Processing</h4>
+            <p>
+              Scrubbed brand aliases and segmented screen diagonals into Small (&lt;48"), Medium (48"–65"), and Large (&gt;65") tiers to compute arithmetic averages and market shares.
+            </p>
+          </div>
+
+          <div class="gov-card">
+            <div class="gov-card__icon">🔒</div>
+            <h4>Privacy &amp; Ethics</h4>
+            <p>
+              Contains exclusively public appliance engineering specifications. Zero Personally Identifiable Information (PII)
+              under the Australian Privacy Act 1988. Independent, commercial-free analysis.
+            </p>
+          </div>
+
+          <div class="gov-card">
+            <div class="gov-card__icon">⚖️</div>
+            <h4>Limitations</h4>
+            <p>
+              Energy ratings follow standard test AS/NZS 62087. Real-world consumption will vary
+              with user picture modes, ambient sensors, daily viewing hours, and gaming usage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/PowerIcon.png" alt="PowerSense logo" width="34" height="34" />
+          <span class="nav__logo-text">Power<span>Sense</span></span>
+        </a>
+        <p class="footer__desc">
+          Empowering Australian households with clear, independent appliance energy insights.
+        </p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__col-title">Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="televisions.html">Televisions</a></li>
+          <li><a href="data-story.html">Data Story</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__col-title">Data Sources</h4>
+        <ul>
+          <li><a href="https://www.energyrating.gov.au" target="_blank" rel="noopener">Energy Rating AU (GEMS)</a></li>
+          <li><a href="https://www.aer.gov.au" target="_blank" rel="noopener">Australian Energy Regulator</a></li>
+          <li><a href="https://www.dcceew.gov.au" target="_blank" rel="noopener">DCCEEW Emissions Factors</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; <span id="currentYear">2026</span> PowerSense. Created for COS30045 Data Visualisation.</p>
+      <p class="footer__ai-note">Generative AI Acknowledgement: Content, storyboards, and visualisations developed with Google DeepMind Antigravity assistance.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/charts.js"></script>
+</body>
+</html>
