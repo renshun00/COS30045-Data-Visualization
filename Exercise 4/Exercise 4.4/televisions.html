@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Televisions – PowerSense</title>
+  <meta name="description" content="Compare energy consumption and running costs of televisions available in the Australian market." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="PowerSense – Home">
+        <img src="assets/img/PowerIcon.png" alt="PowerSense logo" width="42" height="42" />
+        <span class="nav__logo-text">Power<span>Sense</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle"
+              aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="televisions.html" class="nav__link">Televisions</a></li>
+        <li><a href="about.html"       class="nav__link">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="about-hero">
+      <div class="container">
+        <span class="hero__eyebrow">Australian Market 2024</span>
+        <h1>Television Energy Guide</h1>
+        <p class="hero__sub" style="color:rgba(250,242,206,0.78);">
+          Compare screen sizes, panel technologies, energy ratings, and estimated running costs
+          for popular televisions available in Australia.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== INTRO CARDS ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Technology Overview</span>
+          <h2>How panel type affects energy use</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__icon">🖥️</div>
+            <h3 class="card__title">LED / LCD</h3>
+            <p>The most common TV technology. A LED-backlit LCD panel is generally the most energy-efficient option per cm² of screen, particularly with local dimming. Typical power: 50–180 W depending on size.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">✨</div>
+            <h3 class="card__title">OLED</h3>
+            <p>Each pixel produces its own light, delivering perfect blacks and vibrant colours. Energy draw depends heavily on screen brightness and content. Dark scenes use significantly less power than bright ones. Typical: 70–220 W.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⚡</div>
+            <h3 class="card__title">QLED / Mini-LED</h3>
+            <p>Quantum dot or Mini-LED backlights deliver brighter images with better HDR performance. They tend to consume more power at peak brightness than standard LED panels. Typical: 100–280 W.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TV COMPARISON TABLE ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Product Comparison</span>
+          <h2>Energy comparison — popular models</h2>
+          <p>Running costs calculated at 4 hours/day, 33 c/kWh (Australian average).</p>
+        </div>
+
+        <div class="tv-table-wrap">
+          <table class="tv-table" aria-label="Television energy comparison">
+            <thead>
+              <tr>
+                <th scope="col">Model</th>
+                <th scope="col">Size</th>
+                <th scope="col">Panel</th>
+                <th scope="col">Power (W)</th>
+                <th scope="col">Energy Label</th>
+                <th scope="col">kWh / yr<br><small style="font-weight:400;opacity:0.7">(4 h/day)</small></th>
+                <th scope="col">Est. Cost / yr</th>
+                <th scope="col">Star Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Samsung QN65S95D</strong></td>
+                <td>65&Prime;</td>
+                <td>QD-OLED</td>
+                <td>180</td>
+                <td><span class="energy-label energy-label--C">C</span></td>
+                <td>263</td>
+                <td>$86.79</td>
+                <td><span class="star-badge star-badge--mid">★★★★ 4.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>LG OLED65C4</strong></td>
+                <td>65&Prime;</td>
+                <td>OLED evo</td>
+                <td>155</td>
+                <td><span class="energy-label energy-label--B">B</span></td>
+                <td>226</td>
+                <td>$74.58</td>
+                <td><span class="star-badge star-badge--high">★★★★★ 4.5</span></td>
+              </tr>
+              <tr>
+                <td><strong>Sony XR-65X90L</strong></td>
+                <td>65&Prime;</td>
+                <td>Full Array LED</td>
+                <td>210</td>
+                <td><span class="energy-label energy-label--D">D</span></td>
+                <td>307</td>
+                <td>$101.31</td>
+                <td><span class="star-badge star-badge--mid">★★★ 3.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>Hisense 65U8K</strong></td>
+                <td>65&Prime;</td>
+                <td>Mini-LED ULED</td>
+                <td>235</td>
+                <td><span class="energy-label energy-label--D">D</span></td>
+                <td>343</td>
+                <td>$113.19</td>
+                <td><span class="star-badge star-badge--mid">★★★ 3.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>LG NanoCell 55NANO86</strong></td>
+                <td>55&Prime;</td>
+                <td>NanoCell LED</td>
+                <td>120</td>
+                <td><span class="energy-label energy-label--B">B</span></td>
+                <td>175</td>
+                <td>$57.75</td>
+                <td><span class="star-badge star-badge--high">★★★★★ 5.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>Sony Bravia KD-55X80L</strong></td>
+                <td>55&Prime;</td>
+                <td>LED LCD</td>
+                <td>100</td>
+                <td><span class="energy-label energy-label--B">B</span></td>
+                <td>146</td>
+                <td>$48.18</td>
+                <td><span class="star-badge star-badge--high">★★★★★ 5.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>Panasonic MX700 50&Prime;</strong></td>
+                <td>50&Prime;</td>
+                <td>LED LCD</td>
+                <td>135</td>
+                <td><span class="energy-label energy-label--C">C</span></td>
+                <td>197</td>
+                <td>$65.01</td>
+                <td><span class="star-badge star-badge--mid">★★★★ 4.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>Samsung QA43Q60C</strong></td>
+                <td>43&Prime;</td>
+                <td>QLED</td>
+                <td>95</td>
+                <td><span class="energy-label energy-label--B">B</span></td>
+                <td>139</td>
+                <td>$45.87</td>
+                <td><span class="star-badge star-badge--high">★★★★★ 4.5</span></td>
+              </tr>
+              <tr>
+                <td><strong>TCL 43P735</strong></td>
+                <td>43&Prime;</td>
+                <td>LED LCD</td>
+                <td>75</td>
+                <td><span class="energy-label energy-label--A">A</span></td>
+                <td>110</td>
+                <td>$36.30</td>
+                <td><span class="star-badge star-badge--high">★★★★★★ 6.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>TCL S5400A 32&Prime;</strong></td>
+                <td>32&Prime;</td>
+                <td>LED LCD</td>
+                <td>65</td>
+                <td><span class="energy-label energy-label--A">A</span></td>
+                <td>95</td>
+                <td>$31.35</td>
+                <td><span class="star-badge star-badge--high">★★★★★★ 6.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>Philips 65PUS8808</strong></td>
+                <td>65&Prime;</td>
+                <td>Ambilight LED</td>
+                <td>170</td>
+                <td><span class="energy-label energy-label--C">C</span></td>
+                <td>248</td>
+                <td>$81.84</td>
+                <td><span class="star-badge star-badge--mid">★★★★ 4.0</span></td>
+              </tr>
+              <tr>
+                <td><strong>Hisense 32A4K</strong></td>
+                <td>32&Prime;</td>
+                <td>LED LCD</td>
+                <td>48</td>
+                <td><span class="energy-label energy-label--A">A</span></td>
+                <td>70</td>
+                <td>$23.10</td>
+                <td><span class="star-badge star-badge--high">★★★★★★ 6.0</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:1rem;font-size:0.82rem;opacity:0.55;">
+          * Model specifications are illustrative examples. Energy labels follow the EU / Australian Energy Rating scheme.
+          Running cost estimated at 4 hours/day × 365 days × $0.33/kWh.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== TIPS ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Expert Tips</span>
+          <h2>Reduce your TV's running costs</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__icon">🔆</div>
+            <h3 class="card__title">Lower the backlight</h3>
+            <p>Reducing a TV's backlight or OLED brightness setting from maximum to 50% can cut power draw by 30–40% with little visible difference in most room lighting conditions.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🌙</div>
+            <h3 class="card__title">Enable eco mode</h3>
+            <p>Most modern televisions have an Eco or Energy Saving mode that automatically adjusts brightness based on ambient light. Enabling it can save 10–25% of power consumption over time.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🔌</div>
+            <h3 class="card__title">Switch off at the wall</h3>
+            <p>A TV on standby still draws 0.3–1.5 W. Over a year, that adds up to 2–14 kWh — small but completely avoidable. Smart power strips make this effortless.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/PowerIcon.png" alt="" aria-hidden="true" />
+        <span class="footer__brand-name">PowerSense</span>
+      </div>
+      <div class="footer__info">
+        <p>&copy; <span id="year"></span> &nbsp;Ren Khoo</p>
+        <p class="footer__ai-note">
+          ✦ Content and code on this site were developed with the assistance of Generative AI (Claude by Anthropic).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
