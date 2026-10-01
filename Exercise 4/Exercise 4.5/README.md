@@ -12,21 +12,15 @@ Use the TV brand dataset loaded in Exercise 4.4 to bind data to SVG `<rect>` ele
 
 ```
 Exercise 4.5/
-├── index.html               ← Home page with D3 bar chart section
-├── televisions.html         ← Televisions page
-├── about.html               ← About page
+├── index.html               ← Webpage containing the exercise task
 ├── README.md                ← Exercise documentation
 ├── data/
 │   └── tvBrandCount.csv     ← CSV dataset containing TV brand counts
 └── assets/
     ├── css/
     │   └── style.css        ← Stylesheet
-    ├── js/
-    │   ├── main.js          ← Navigation & UI logic
-    │   ├── calculator.js    ← Energy calculator
-    │   └── d3-main.js       ← Exercise 4.5 D3 binding & bar chart code
-    └── img/
-        └── PowerIcon.png    ← Logo
+    └── js/
+        └── d3-main.js       ← Exercise 4.5 D3 binding & bar chart code
 ```
 
 ## Implementation Steps ([assets/js/d3-main.js](file:///c:/COS30045-Data-Visualization/Exercise%204/Exercise%204.5/assets/js/d3-main.js))

@@ -11,21 +11,15 @@ In this exercise, we load tabular data from a CSV file into D3, convert column d
 
 ```
 Exercise 4.4/
-├── index.html               ← Home page including D3 section
-├── televisions.html         ← Televisions page
-├── about.html               ← About page
+├── index.html               ← Webpage containing the exercise task
 ├── README.md                ← Exercise documentation
 ├── data/
 │   └── tvBrandCount.csv     ← CSV dataset containing TV brand counts
 └── assets/
     ├── css/
-    │   └── style.css        ← External stylesheet
-    ├── js/
-    │   ├── main.js          ← Navigation & UI logic
-    │   ├── calculator.js    ← Energy calculator
-    │   └── d3-main.js       ← Exercise 4.4 D3 CSV loading & processing
-    └── img/
-        └── PowerIcon.png    ← Logo
+    │   └── style.css        ← Stylesheet
+    └── js/
+        └── d3-main.js       ← Exercise 4.4 D3 CSV loading & processing
 ```
 
 ## Exercise Steps & Implementation Details

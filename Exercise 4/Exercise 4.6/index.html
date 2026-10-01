@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 4.6 – Scaling Charts</title>
+  <meta name="description" content="COS30045 Exercise 4.6 – Using d3.scaleLinear and d3.scaleBand to scale charts to SVG dimensions" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="exercise-header">
+      <span class="exercise-badge">Exercise 4.6</span>
+      <h1>Scaling Charts with D3</h1>
+      <p class="exercise-desc">
+        Applying <code>d3.scaleLinear()</code> for quantitative bar widths on the x-axis and <code>d3.scaleBand()</code> for categorical bar positioning and thickness on the y-axis.
+      </p>
+    </header>
+
+    <main>
+      <section class="exercise-card">
+        <h2>Adaptable Bar Chart with D3 Scales</h2>
+        <p>
+          Bars now dynamically scale to fit within the constrained <code>500 &times; 800</code> SVG viewBox. The band scale automatically computes bar thickness (<code>bandwidth()</code>) and spaces them out with proportional padding.
+        </p>
+
+        <!-- D3 appends the SVG canvas and scaled rect elements inside this container -->
+        <div class="responsive-svg-container" id="chart"></div>
+      </section>
+    </main>
+
+    <footer class="exercise-footer">
+      <p>COS30045 Data Visualisation &bull; Exercise 4.6</p>
+    </footer>
+
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/d3-main.js"></script>
+
+</body>
+</html>

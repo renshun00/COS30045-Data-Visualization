@@ -44,41 +44,64 @@ const drawBarChart = data => {
       .attr("width", d => d.count)
       .attr("height", barHeight)
       .attr("fill", "blue");
+
+  console.log("Exercise 4.5 – Bars rendered in DOM:", svg.selectAll("rect").size());
 };
 
-// Alias createBarChart to drawBarChart for consistency with both names in the instructions
 const createBarChart = drawBarChart;
 
-// ── Load CSV Data (from Exercise 4.4) ─────────────────────────────────────────
-d3.csv("../data/tvBrandCount.csv", d => {
-  return {
-    brand: d.brand,
-    count: +d.count //=> converts count string to number
-  };
-}).then(data => {
-  console.log("Loaded data:", data);
-  console.log("Dataset length:", data.length);
-  console.log("Max count (d3.max):", d3.max(data, d => d.count));
-  console.log("Min count (d3.min):", d3.min(data, d => d.count));
-  console.log("Extent [min, max] (d3.extent):", d3.extent(data, d => d.count));
+// Embedded CSV data fallback to support file:/// protocol without CORS issues
+const fallbackCsv = `brand,count
+aiwa,44
+akai,38
+bauhn,73
+blaupunkt,110
+caixun,62
+chiq,47
+eko,189
+emete,55
+englaon,32
+ffalcon,26
+hisense,263
+jvc,122
+kogan,788
+lg,677
+linsar,43
+loewe,27
+philips,118
+samsung,1096
+skyworth,24
+sony,80
+spark electronics,29
+sylvox,132
+tcl,91
+toshiba,50
+walton,24`;
 
-  // Sort descending by count as learned in Exercise 4.4
-  data.sort((a, b) => b.count - a.count);
-  console.log("Sorted data (descending):", data);
-
-  // Call createBarChart / drawBarChart passing the loaded data
-  drawBarChart(data);
-
-}).catch(error => {
-  // Fallback in case web server root is Exercise 4.5
-  console.warn("Could not load '../data/tvBrandCount.csv', trying fallback 'data/tvBrandCount.csv':", error);
-  d3.csv("data/tvBrandCount.csv", d => ({
-    brand: d.brand,
-    count: +d.count
-  })).then(data => {
-    data.sort((a, b) => b.count - a.count);
-    drawBarChart(data);
-  }).catch(err => {
-    console.error("Failed to load CSV data:", err);
-  });
+const rowConverter = d => ({
+  brand: d.brand,
+  count: +d.count
 });
+
+function handleData(data) {
+  console.log("Exercise 4.5 – Loaded data:", data);
+  data.sort((a, b) => b.count - a.count);
+  console.log("Exercise 4.5 – Sorted data (descending):", data);
+  drawBarChart(data);
+}
+
+// Load CSV Data with fallback
+d3.csv("../data/tvBrandCount.csv", rowConverter)
+  .then(data => {
+    handleData(data);
+  })
+  .catch(() => {
+    d3.csv("data/tvBrandCount.csv", rowConverter)
+      .then(data => {
+        handleData(data);
+      })
+      .catch(() => {
+        const parsed = d3.csvParse(fallbackCsv, rowConverter);
+        handleData(parsed);
+      });
+  });

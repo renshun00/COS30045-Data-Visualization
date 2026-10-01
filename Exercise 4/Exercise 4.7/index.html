@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 4.7 – Adding Labels</title>
+  <meta name="description" content="COS30045 Exercise 4.7 – Adding category and value labels to an SVG bar chart with D3" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="exercise-header">
+      <span class="exercise-badge">Exercise 4.7</span>
+      <h1>Adding Labels to D3 Bar Chart</h1>
+      <p class="exercise-desc">
+        Binding data to SVG <code>&lt;g&gt;</code> group elements, translating them via <code>yScale</code>, and appending both brand category names and count value numbers.
+      </p>
+    </header>
+
+    <main>
+      <section class="exercise-card">
+        <h2>Complete Labeled Bar Chart</h2>
+        <p>
+          Each bar is grouped with its category label (right-aligned at <code>x = 90</code>) and value count label (positioned right after the bar).
+        </p>
+
+        <!-- Container for D3 SVG chart -->
+        <div class="responsive-svg-container" id="chart"></div>
+      </section>
+    </main>
+
+    <footer class="exercise-footer">
+      <p>COS30045 Data Visualisation &bull; Exercise 4.7</p>
+    </footer>
+
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/d3-main.js"></script>
+
+</body>
+</html>

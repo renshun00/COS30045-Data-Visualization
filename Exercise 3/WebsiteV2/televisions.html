@@ -236,6 +236,24 @@
       </div>
     </section>
 
+    <!-- ===== D3 BRAND DISTRIBUTION BAR CHART (Exercise 4.7 Integration) ===== -->
+    <section class="section section--alt" id="d3-chart">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">D3 Interactive Visualisation (Exercise 4.7)</span>
+          <h2>Television Models Registered by Brand</h2>
+          <p>
+            Interactive horizontal bar chart displaying certified television brand distributions across Australia.
+            Features dynamic linear &amp; band scaling with aligned brand and count labels.
+          </p>
+        </div>
+
+        <div style="background: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 1.5rem; box-shadow: var(--shadow);">
+          <div class="responsive-svg-container" id="d3-brand-barchart"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== TIPS ===== -->
     <section class="section">
       <div class="container">
@@ -282,6 +300,8 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/d3-brand-chart.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>

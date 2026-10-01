@@ -20,3 +20,6 @@ The exercises in this folder guide you through the fundamental concepts needed t
 
 - **Exercise 4.6 – Scaling charts**  
   Use D3 scales to map data values to positions in a chart.
+
+- **Exercise 4.7 – Adding labels**  
+  Group rectangles and labels using `<g>` and add brand and value text labels.
